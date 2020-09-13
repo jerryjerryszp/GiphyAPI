@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		055F91E11ECB60F41F475790 /* Pods_GiphyAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B3E32D22BAFFBB09F1DAD0 /* Pods_GiphyAPITests.framework */; };
+		1E4FA9F0BE0CDB2DD7D36FDE /* Pods_GiphyAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A304300C9FA0C7D693C6A692 /* Pods_GiphyAPI.framework */; };
 		61FB6CAD250EA347003C6357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FB6CAC250EA347003C6357 /* AppDelegate.swift */; };
 		61FB6CAF250EA347003C6357 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FB6CAE250EA347003C6357 /* SceneDelegate.swift */; };
 		61FB6CB1250EA347003C6357 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FB6CB0250EA347003C6357 /* ViewController.swift */; };
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2559C347677500A62DDB4195 /* Pods-GiphyAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyAPI.debug.xcconfig"; path = "Target Support Files/Pods-GiphyAPI/Pods-GiphyAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		61FB6CA9250EA347003C6357 /* GiphyAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiphyAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FB6CAC250EA347003C6357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61FB6CAE250EA347003C6357 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,11 @@
 		61FB6CBF250EA34C003C6357 /* GiphyAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiphyAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FB6CC3250EA34C003C6357 /* GiphyAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyAPITests.swift; sourceTree = "<group>"; };
 		61FB6CC5250EA34C003C6357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A304300C9FA0C7D693C6A692 /* Pods_GiphyAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GiphyAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8B3E32D22BAFFBB09F1DAD0 /* Pods_GiphyAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GiphyAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACB8804B0B92313C55E4CA8C /* Pods-GiphyAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyAPITests.release.xcconfig"; path = "Target Support Files/Pods-GiphyAPITests/Pods-GiphyAPITests.release.xcconfig"; sourceTree = "<group>"; };
+		B1E10FC767C64C61C45FFBF3 /* Pods-GiphyAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyAPI.release.xcconfig"; path = "Target Support Files/Pods-GiphyAPI/Pods-GiphyAPI.release.xcconfig"; sourceTree = "<group>"; };
+		C5943A18FB2AE1B3367EB6F3 /* Pods-GiphyAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyAPITests.debug.xcconfig"; path = "Target Support Files/Pods-GiphyAPITests/Pods-GiphyAPITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E4FA9F0BE0CDB2DD7D36FDE /* Pods_GiphyAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				055F91E11ECB60F41F475790 /* Pods_GiphyAPITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +74,8 @@
 				61FB6CAB250EA347003C6357 /* GiphyAPI */,
 				61FB6CC2250EA34C003C6357 /* GiphyAPITests */,
 				61FB6CAA250EA347003C6357 /* Products */,
+				F51B5337FE40DE265247BAC5 /* Pods */,
+				A2E1581E82A51CB10F4A588B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +111,27 @@
 			path = GiphyAPITests;
 			sourceTree = "<group>";
 		};
+		A2E1581E82A51CB10F4A588B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A304300C9FA0C7D693C6A692 /* Pods_GiphyAPI.framework */,
+				A8B3E32D22BAFFBB09F1DAD0 /* Pods_GiphyAPITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F51B5337FE40DE265247BAC5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2559C347677500A62DDB4195 /* Pods-GiphyAPI.debug.xcconfig */,
+				B1E10FC767C64C61C45FFBF3 /* Pods-GiphyAPI.release.xcconfig */,
+				C5943A18FB2AE1B3367EB6F3 /* Pods-GiphyAPITests.debug.xcconfig */,
+				ACB8804B0B92313C55E4CA8C /* Pods-GiphyAPITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61FB6CC8250EA34C003C6357 /* Build configuration list for PBXNativeTarget "GiphyAPI" */;
 			buildPhases = (
+				BB6C31CDB6EB9847DFDE6432 /* [CP] Check Pods Manifest.lock */,
 				61FB6CA5250EA347003C6357 /* Sources */,
 				61FB6CA6250EA347003C6357 /* Frameworks */,
 				61FB6CA7250EA347003C6357 /* Resources */,
+				C54FEE3B171C6159FE6527A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +158,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61FB6CCB250EA34C003C6357 /* Build configuration list for PBXNativeTarget "GiphyAPITests" */;
 			buildPhases = (
+				C25857561237902CCE82449C /* [CP] Check Pods Manifest.lock */,
 				61FB6CBB250EA34C003C6357 /* Sources */,
 				61FB6CBC250EA34C003C6357 /* Frameworks */,
 				61FB6CBD250EA34C003C6357 /* Resources */,
@@ -194,6 +230,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BB6C31CDB6EB9847DFDE6432 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GiphyAPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C25857561237902CCE82449C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GiphyAPITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C54FEE3B171C6159FE6527A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GiphyAPI/Pods-GiphyAPI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GiphyAPI/Pods-GiphyAPI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GiphyAPI/Pods-GiphyAPI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		61FB6CA5250EA347003C6357 /* Sources */ = {
@@ -360,6 +460,7 @@
 		};
 		61FB6CC9250EA34C003C6357 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2559C347677500A62DDB4195 /* Pods-GiphyAPI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +479,7 @@
 		};
 		61FB6CCA250EA34C003C6357 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1E10FC767C64C61C45FFBF3 /* Pods-GiphyAPI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +498,7 @@
 		};
 		61FB6CCC250EA34C003C6357 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5943A18FB2AE1B3367EB6F3 /* Pods-GiphyAPITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +521,7 @@
 		};
 		61FB6CCD250EA34C003C6357 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACB8804B0B92313C55E4CA8C /* Pods-GiphyAPITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
