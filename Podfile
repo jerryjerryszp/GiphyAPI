@@ -11,10 +11,15 @@ target 'GiphyAPI' do
   pod 'Kingfisher'
   pod 'JGProgressHUD'
   pod 'SwiftGifOrigin'
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+
 
   target 'GiphyAPITests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxBlocking', '~> 5'
+    pod 'RxTest', '~> 5'
   end
 
 end
