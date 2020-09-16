@@ -10,11 +10,8 @@ import Foundation
 import UIKit
 
 class FavoritesCollectionViewCell: UICollectionViewCell {
-    
-    
-    @IBOutlet weak var collectionView: UIImageView!
-    
-    
+    // MARK: IBOutlets
+    @IBOutlet weak var gifImageView: UIImageView!
     @IBOutlet weak var unfavoriteButton: UIButton!
     
     @IBAction func unfavorite(_ sender: Any) {

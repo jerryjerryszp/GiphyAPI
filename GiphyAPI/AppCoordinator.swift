@@ -19,7 +19,7 @@ class AppCoordinator {
     
     func start() {
         let viewController = ViewController.instantiate(viewModel: GiphyDataViewModel())
-        let favoritesViewController = FavoritesViewController.instantiate(viewModel: GiphyDataViewModel())
+        let favoritesViewController = FavoritesViewController.instantiate(viewModel: FavoriteGifsViewModel())
         
         let navigationControllerOne = UINavigationController(rootViewController: viewController)
         let navigationControllerTwo = UINavigationController()

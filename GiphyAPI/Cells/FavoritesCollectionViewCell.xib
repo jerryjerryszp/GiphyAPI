@@ -16,9 +16,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="205" height="205"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kcv-zr-t6k">
-                        <rect key="frame" x="28" y="8" width="149" height="149"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kcv-zr-t6k">
+                        <rect key="frame" x="28" y="8" width="71" height="71"/>
                         <constraints>
+                            <constraint firstAttribute="width" constant="120" id="Uu0-cW-hbO"/>
                             <constraint firstAttribute="width" secondItem="Kcv-zr-t6k" secondAttribute="height" multiplier="1:1" id="oha-Qr-tpV"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -28,7 +29,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nU7-Ep-1ZD">
-                        <rect key="frame" x="28" y="167" width="149" height="30"/>
+                        <rect key="frame" x="28" y="89" width="71" height="30"/>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.96078431369999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="iXr-nz-bKS"/>
@@ -55,7 +56,7 @@
                 </constraints>
             </collectionViewCellContentView>
             <connections>
-                <outlet property="collectionView" destination="Kcv-zr-t6k" id="QsM-Ah-LsS"/>
+                <outlet property="gifImageView" destination="Kcv-zr-t6k" id="bie-47-Q6v"/>
                 <outlet property="unfavoriteButton" destination="nU7-Ep-1ZD" id="egg-to-1Cb"/>
             </connections>
             <point key="canvasLocation" x="-51.449275362318843" y="81.361607142857139"/>

@@ -8,10 +8,15 @@
 
 import Foundation
 import RxSwift
+import CoreData
 
 protocol GiphyServiceProtocol {
     func fetchGiphyData() -> Observable<[Gif]>
     func searchGiphyData(keyword: String) -> Observable<[Gif]>
+}
+
+protocol FavoriteGifsServiceProtocol {
+    func fetchFavoriteGifs() -> Observable<[FavoriteGif]>
 }
 
 class GiphyService: GiphyServiceProtocol {
@@ -77,6 +82,24 @@ class GiphyService: GiphyServiceProtocol {
                         observer.onError(error)
                     }
                 }
+            }
+            
+            return Disposables.create {}
+        }
+    }
+}
+
+class FavoriteGifsService: FavoriteGifsServiceProtocol {
+    func fetchFavoriteGifs() -> Observable<[FavoriteGif]> {
+        return Observable.create { observer -> Disposable in
+            
+            let fetchRequest: NSFetchRequest<FavoriteGif> = FavoriteGif.fetchRequest()
+                    
+            do {
+                let savedGifs = try CoreDataManager.context.fetch(fetchRequest)
+                observer.onNext(savedGifs)
+            } catch {
+                observer.onError(error)
             }
             
             return Disposables.create {}
