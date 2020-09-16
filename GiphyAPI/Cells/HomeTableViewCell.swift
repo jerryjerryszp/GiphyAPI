@@ -22,19 +22,15 @@ class HomeTableViewCell: UITableViewCell {
     
     // MARK: IBActions
     @IBAction func addToFavorites(_ sender: Any) {
-        print(gifViewModel?.displayText)
+        if addToFavoritesButton.currentTitle == "Save" {
+            gifViewModel?.addToFavorites()
+        } else {
+            gifViewModel?.removeFromFavorite()
+        }
     }
-    
-    
     
     // MARK: Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
-    
-    
-    
-    
-    
 }

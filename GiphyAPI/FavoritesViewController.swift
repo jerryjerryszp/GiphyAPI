@@ -42,6 +42,17 @@ class FavoritesViewController: UIViewController {
         setupViews()
     }
     
+    // MARK: Helpers
+    /**
+     Sets up favorites collection view
+     */
+    func setupCollectionView() {
+        collectionView.register(
+            UINib(nibName: String(describing: FavoritesCollectionViewCell.self), bundle: nil),
+            forCellWithReuseIdentifier: String(describing: FavoritesCollectionViewCell.self)
+        )
+    }
+    
     func setupViews() {
         navigationItem.title = giphyDataViewModel?.favoritesTitle
         navigationController?.navigationBar.prefersLargeTitles = true

@@ -107,6 +107,7 @@ class ViewController: UIViewController {
             cell.gifViewModel = viewModel
             cell.gifImageView.kf.setImage(with: url)
             cell.gitTitleLabel.text = viewModel.displayText
+            cell.addToFavoritesButton.setTitle(viewModel.addToFavoritesButtonTitle, for: .normal)
             
         }.disposed(by: disposeBag)
     }
