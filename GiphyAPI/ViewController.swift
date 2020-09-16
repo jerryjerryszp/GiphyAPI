@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import Kingfisher
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class ViewController: UIViewController {
     // MARK: IBOutlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -24,6 +24,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     static func instantiate(viewModel: GiphyDataViewModel) -> ViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         let viewController = storyboard.instantiateInitialViewController() as! ViewController
+        viewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         viewController.giphyDataViewModel = viewModel
         return viewController
     }
@@ -109,7 +110,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             
         }.disposed(by: disposeBag)
     }
-    
+}
+
+extension ViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         searchBar.resignFirstResponder()
     }

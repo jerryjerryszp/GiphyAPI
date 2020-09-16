@@ -41,5 +41,6 @@ struct Constants {
     
     struct GifsViewModel {
         static let title = "Giphy"
+        static let favoritesTitle = "Favorites"
     }
 }

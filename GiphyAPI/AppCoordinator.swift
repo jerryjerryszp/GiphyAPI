@@ -19,9 +19,16 @@ class AppCoordinator {
     
     func start() {
         let viewController = ViewController.instantiate(viewModel: GiphyDataViewModel())
-        let navigationController = UINavigationController(rootViewController: viewController)
+        let favoritesViewController = FavoritesViewController.instantiate(viewModel: GiphyDataViewModel())
         
-        window.rootViewController = navigationController
+        let navigationControllerOne = UINavigationController(rootViewController: viewController)
+        let navigationControllerTwo = UINavigationController()
+        navigationControllerTwo.viewControllers = [favoritesViewController]
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [navigationControllerOne, navigationControllerTwo]
+        
+        window.rootViewController = tabBarController
         window.makeKeyAndVisible()
     }
 }

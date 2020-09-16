@@ -11,6 +11,7 @@ import RxSwift
 
 final class GiphyDataViewModel {
     let title = Constants.GifsViewModel.title
+    let favoritesTitle = Constants.GifsViewModel.favoritesTitle
     
     private let giphyService: GiphyServiceProtocol
     
