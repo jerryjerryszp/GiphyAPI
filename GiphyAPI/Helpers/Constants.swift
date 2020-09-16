@@ -19,6 +19,7 @@ struct Constants {
         static let random_idKey = "random_id"
         
         static let trendingAPI = "https://api.giphy.com/v1/gifs/trending"
+        static let randomAPI = "https://api.giphy.com/v1/gifs/random"
         static let searchAPI = "https://api.giphy.com/v1/gifs/search"
         
         static let api_key = "e7OfoUnnKGUOF1YExEYRzEoh8fghL9oz"

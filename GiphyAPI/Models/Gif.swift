@@ -18,7 +18,7 @@ struct GiphyResponse: Decodable {
 
 struct Gif: Decodable {
     let id: String
-    let url: String
+    let url: String?
     let bitly_url: String
     let embed_url: String
     let username: String
@@ -30,22 +30,29 @@ struct Gif: Decodable {
 }
 
 struct ImageDetail: Decodable {
-    let downsized: Downsized
-    let preview_gif: PreviewGif
+    let fixed_height: FixedHeight
+//    let downsized: Downsized
+//    let preview_gif: PreviewGif
 }
 
-struct Downsized: Decodable {
-    let url: String
-    let width: String
-    let height: String
-    let size: String
-}
-
-struct PreviewGif: Decodable {
+struct FixedHeight: Decodable {
     let url: String
     let width: String
     let height: String
 }
+
+//struct Downsized: Decodable {
+//    let url: String
+//    let width: String
+//    let height: String
+//    let size: String
+//}
+//
+//struct PreviewGif: Decodable {
+////    let url: String
+//    let width: String
+//    let height: String
+//}
 
 struct Pagination: Decodable {
     let count: Int

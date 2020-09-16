@@ -23,4 +23,10 @@ final class GiphyDataViewModel {
             $0.map { GifViewModel(gif: $0) }
         }
     }
+    
+    func searchGifViewModels(keyword: String) -> Observable<[GifViewModel]> {
+        giphyService.searchGiphyData(keyword: keyword).map {
+            $0.map { GifViewModel(gif: $0) }
+        }
+    }
 }

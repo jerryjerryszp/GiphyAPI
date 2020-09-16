@@ -14,6 +14,9 @@ struct GifViewModel {
     var displayText: String {
         return gif.title
     }
+    var gifUrl: String {
+        return gif.images.fixed_height.url
+    }
     
     init(gif: Gif) {
         self.gif = gif
