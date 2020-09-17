@@ -112,12 +112,11 @@ class ViewController: UIViewController {
             cell.addToFavoritesButtonTap
                 .subscribe(onNext: {
                     if viewModel.addToFavoritesButtonTitle == "Save" {
-//                        viewModel.addToFavorites()
-//                        let haha = self.favoriteGifsViewModel?.addToFavorites(gif: viewModel)
+                        viewModel.addToFavorites()
                         
                         cell.addToFavoritesButton.setTitle(viewModel.addToFavoritesButtonTitle, for: .normal)
                     } else {
-//                        self.favoriteGifsViewModel?.removeFromFavorites(id: viewModel.gifId)
+                        viewModel.removeFromFavorite()
                         
                         cell.addToFavoritesButton.setTitle(viewModel.addToFavoritesButtonTitle, for: .normal)
                     }
