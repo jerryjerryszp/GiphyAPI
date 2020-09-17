@@ -21,6 +21,12 @@ struct GifViewModel {
     var addToFavoritesButtonTitle: String {
         return gifExists(id: gif.id) ? "Remove" : "Save"
     }
+    var gifId: String {
+        return gif.id
+    }
+    var gifTitle: String {
+        return gif.title
+    }
     
     init(gif: Gif) {
         self.gif = gif
@@ -50,8 +56,6 @@ struct GifViewModel {
      Add the gif to favorites
      */
     func addToFavorites() {
-        print(gif.title)
-        
         if gifExists(id: gif.id) {
             return
         }
@@ -68,8 +72,6 @@ struct GifViewModel {
             let gifData = try Data(contentsOf: url)
             favoriteGif.gif = gifData
             CoreDataManager.saveContext()
-            
-            print("saving successful")
         } catch {
             print("error")
         }

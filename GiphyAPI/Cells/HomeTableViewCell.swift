@@ -8,9 +8,10 @@
 
 import Foundation
 import UIKit
+import RxSwift
+import RxCocoa
 
 class HomeTableViewCell: UITableViewCell {
-    
     // MARK: IBOutlets
     @IBOutlet weak var gifImageViewContainer: UIView!
     @IBOutlet weak var gifImageView: UIImageView!
@@ -19,18 +20,18 @@ class HomeTableViewCell: UITableViewCell {
     
     // MARK: Properties
     var gifViewModel: GifViewModel?
-    
-    // MARK: IBActions
-    @IBAction func addToFavorites(_ sender: Any) {
-        if addToFavoritesButton.currentTitle == "Save" {
-            gifViewModel?.addToFavorites()
-        } else {
-            gifViewModel?.removeFromFavorite()
-        }
+    var disposeBag = DisposeBag()
+    var addToFavoritesButtonTap: Observable<Void> {
+        return self.addToFavoritesButton.rx.tap.asObservable()
     }
     
     // MARK: Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
     }
 }

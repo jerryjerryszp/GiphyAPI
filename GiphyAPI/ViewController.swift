@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     // MARK: Properties
     let disposeBag = DisposeBag()
     private var giphyDataViewModel: GiphyDataViewModel?
+    private var favoriteGifsViewModel: FavoriteGifsViewModel?
     
     // MARK: Lifecycle
     static func instantiate(viewModel: GiphyDataViewModel) -> ViewController {
@@ -99,7 +100,6 @@ class ViewController: UIViewController {
             cellIdentifier: "HomeTableViewCell",
             cellType: HomeTableViewCell.self
         )) { row, viewModel, cell in
-            
             guard let url = URL(string: viewModel.gifUrl) else {
                 return
             }
@@ -109,7 +109,26 @@ class ViewController: UIViewController {
             cell.gitTitleLabel.text = viewModel.displayText
             cell.addToFavoritesButton.setTitle(viewModel.addToFavoritesButtonTitle, for: .normal)
             
+            cell.addToFavoritesButtonTap
+                .subscribe(onNext: {
+                    if viewModel.addToFavoritesButtonTitle == "Save" {
+//                        viewModel.addToFavorites()
+//                        let haha = self.favoriteGifsViewModel?.addToFavorites(gif: viewModel)
+                        
+                        cell.addToFavoritesButton.setTitle(viewModel.addToFavoritesButtonTitle, for: .normal)
+                    } else {
+//                        self.favoriteGifsViewModel?.removeFromFavorites(id: viewModel.gifId)
+                        
+                        cell.addToFavoritesButton.setTitle(viewModel.addToFavoritesButtonTitle, for: .normal)
+                    }
+                    
+                }).disposed(by: cell.disposeBag)
         }.disposed(by: disposeBag)
+        
+//        tableView.rx.modelSelected(GifViewModel.self)
+//            .subscribe(onNext: { viewModel in
+//                print(viewModel)
+//            }).disposed(by: self.disposeBag)
     }
 }
 
